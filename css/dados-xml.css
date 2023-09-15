@@ -1,13 +1,27 @@
 /* Estilos para a tabela */
+
+#tbl1{
+  width: 100%;
+}
+
+body{
+  text-align: center;
+  width: 70%;
+  border: 1px solid black;
+  margin: auto;
+  padding: 50px 0 50px;
+  background-color: azure;
+}
+
 table {
     width: 70%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 10px 0;
   }
   
   th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 0px solid #ddd;
+    padding: auto;
     text-align: left;
   }
   
@@ -30,4 +44,3 @@ table {
   tr:hover {
     background-color: #e2e2e2;
   }
-  
