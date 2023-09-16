@@ -1,4 +1,4 @@
-const url = `http://192.168.40.3:3000/clientes`;
+const url = `http://192.168.40.10:3000/clientes`;
 
 // table para mosragem dos dados
 var table;
@@ -13,6 +13,7 @@ function criarTabela(){
                 <th>Data Nascimento</th>
                 <th>Profissão</th>
                 <th>Endereço</th>
+                <th>Idade</th>
             </tr>`;
 }
 
@@ -34,6 +35,8 @@ leituraDados()
 
 const preencherFormulario = (clientes) => {
     for (const cliente of clientes) {
+        const idade = calcularIdade(cliente.data_nasc);
+        
         table +=
             `<tr>
                 <td>${cliente.id}</td>
@@ -44,6 +47,7 @@ const preencherFormulario = (clientes) => {
                 <td>${cliente.profissao}</td>
                 <td>${cliente.data_nasc}</td>
                 <td>${cliente.endereco.logradouro}, ${cliente.endereco.numero}, ${cliente.endereco.bairro}, ${cliente.endereco.cidade}, ${cliente.endereco.uf}, ${cliente.endereco.cep}</td>
+                <td>${idade}</td>
             </tr>`;
     }
 
@@ -52,12 +56,17 @@ const preencherFormulario = (clientes) => {
 }
 
 
+// Função para calcular a idade
+calcularIdade()
 
+function calcularIdade(dataNascimento) {
+    const hoje = new Date();
+    const dataNascCliente = new Date(dataNascimento);
+    const diff = hoje - dataNascCliente;
 
-
-
-
-
+    const idade = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
+    return idade;
+}
 
 
 
