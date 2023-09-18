@@ -1,4 +1,4 @@
-const url = `http://192.168.40.10:3000/clientes`;
+const url = `http://192.168.40.3:3000/clientes`;
 
 // table para mosragem dos dados
 var table;
