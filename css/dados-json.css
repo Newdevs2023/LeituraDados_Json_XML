@@ -7,7 +7,7 @@
 body{
   text-align: center;
   width: 70%;
-  border: 1px solid black;
+
   margin: auto;
   padding: 50px 0 50px;
   background-color: azure;
@@ -43,4 +43,8 @@ table {
   /* Estilo para o hover nas linhas */
   tr:hover {
     background-color: #e2e2e2;
+  }
+
+  #titulo{
+    color:#ffffff
   }
